@@ -1,0 +1,14 @@
+#editor {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.ProseMirror:focus-visible {
+    outline: none;
+}
+
+.ProseMirror {
+    padding: 5px;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Websocket server for real time collab demo",
+  "main": "index.js",
+  "author": "Jason Gao",
+  "license": "MIT",
+  "dependencies": {
+    "lib0": "^0.2.41",
+    "lodash.debounce": "^4.0.8",
+    "ws": "^7.4.5",
+    "y-protocols": "^1.0.4",
+    "yjs": "^13.5.5"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
