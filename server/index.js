@@ -1,5 +1,5 @@
-const WebSocket = require('ws');
-const { setupWSConnection } = require("./utils")
+import WebSocket from 'ws';
+import { setupWSConnection } from "./utils.js";
 
 const wss = new WebSocket.Server({
     port: 8082,

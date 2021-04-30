@@ -5,12 +5,18 @@
   "main": "index.js",
   "author": "Jason Gao",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
+    "aws-sdk": "^2.896.0",
+    "dynamodb-leveldown": "^3.1.0",
+    "levelup": "^5.0.0",
     "lib0": "^0.2.41",
     "lodash.debounce": "^4.0.8",
     "ws": "^7.4.5",
+    "y-leveldb": "^0.1.0",
     "y-protocols": "^1.0.4",
-    "yjs": "^13.5.5"
+    "yjs": "^13.5.5",
+    "level": "^7.0.0"
   },
   "scripts": {
     "start": "node index.js"

@@ -17,22 +17,7 @@ const YExtensions = Extension.create({
       yUndoPlugin()
     ];
   }
-})
-// const Sync = Extension.create({
-//   addProseMirrorPlugins() {
-//     return [ySyncPlugin(type)];
-//   }
-// });
-// const Cursor = Extension.create({
-//   addProseMirrorPlugins() {
-//     return [yCursorPlugin(provider.awareness)];
-//   }
-// });
-// const Undo = Extension.create({
-//   addProseMirrorPlugins() {
-//     return [yUndoPlugin()];
-//   }
-// });
+});
 
 const MenuBar = ({ editor }) => {
   if (!editor) {
