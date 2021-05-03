@@ -5,6 +5,8 @@ import { defaultExtensions } from '@tiptap/starter-kit'
 import * as Y from "yjs"
 import { ySyncPlugin, yCursorPlugin, yUndoPlugin, undo, redo } from 'y-prosemirror';
 import { WebsocketProvider } from 'y-websocket';
+import { CustomNode, TalkingPoint } from "./node";
+import Placeholder from '@tiptap/extension-placeholder';
 
 const ydoc = new Y.Doc();
 const provider = new WebsocketProvider("ws://localhost:8082", "demo", ydoc);
@@ -134,13 +136,21 @@ const MenuBar = ({ editor }) => {
       <button onClick={() => editor.chain().focus().redo().run()}>
         redo
       </button>
+      <button onClick={() => editor.chain().focus().addCustom().selectNodeForward().run()}>
+        add talking point
+      </button>
     </>
   )
 }
 
 const Tiptap = () => {
   const editor = useEditor({
-    extensions: [...defaultExtensions(), YExtensions],
+    extensions: [
+      ...defaultExtensions(),
+      YExtensions,
+      CustomNode, 
+      TalkingPoint,
+    ],
     content: '',
   })
 

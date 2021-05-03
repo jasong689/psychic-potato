@@ -12,3 +12,43 @@
 .ProseMirror {
     padding: 5px;
 }
+
+.talking-point {
+    color: rgba(0,0,0,0.4);
+    display: flex;
+}
+
+.talking-point-content {
+    flex-grow: 1;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.talking-point .pointer {
+    padding-right: 5px;
+}
+
+.talking-point-content ul {
+    display: none;
+}
+
+.talking-point-content.visible ul {
+    display: block;
+}
+
+.talking-point-content p {
+    margin: 0;
+    position: relative;
+}
+
+.tp {
+    position: relative;
+}
+
+.tp:not(.no-placeholder):before {
+    content: "Add a talking point";
+    position: absolute;
+    left: 0;
+}
